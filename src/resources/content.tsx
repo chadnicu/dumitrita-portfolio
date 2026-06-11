@@ -50,7 +50,7 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `About - ${person.name}`,
+  title: `${person.name} - About`,
   description: `Meet ${person.name}, ${person.role} from Moldova`,
   tableOfContent: {
     display: false,
@@ -107,7 +107,7 @@ const work: Work = {
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Gallery - ${person.name}`,
+  title: `${person.name} - Gallery`,
   description: `A visual collection by ${person.name}`,
   images: [
     {

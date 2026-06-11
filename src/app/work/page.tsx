@@ -4,7 +4,7 @@ import { Projects } from "@/components/work/Projects";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: `${work.title} - ${person.name}`,
+    title: `${person.name} - ${work.title}`,
     description: work.description,
     baseURL: baseURL,
     image: `/api/og/generate?title=${encodeURIComponent(work.title)}`,
@@ -19,7 +19,7 @@ export default function Work() {
         as="webPage"
         baseURL={baseURL}
         path={work.path}
-        title={`${work.title} - ${person.name}`}
+        title={`${person.name} - ${work.title}`}
         description={work.description}
         image={`/api/og/generate?title=${encodeURIComponent(work.title)}`}
         author={{
