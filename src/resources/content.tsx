@@ -7,7 +7,7 @@ const person: Person = {
   name: `Dumitrița Scurtu`,
   role: "Visual & Brand Designer",
   avatar: "/images/avatar.jpg",
-  email: "",
+  email: "dumitrita.scurtu2017@gmail.com",
   location: "Europe/Chisinau", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["Română", "English"], // optional: Leave the array empty if you don't want to display languages
 };
@@ -16,7 +16,24 @@ const social: Social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   // Set essentials: true for links you want to show on the about page
-  // TODO: add real links (Behance/Instagram/LinkedIn/Email) when available
+  {
+    name: "Email",
+    icon: "email",
+    link: `mailto:${person.email}`,
+    essential: true,
+  },
+  {
+    name: "Instagram",
+    icon: "instagram",
+    link: "https://www.instagram.com/calytrix.w",
+    essential: true,
+  },
+  {
+    name: "Phone",
+    icon: "phone",
+    link: "tel:+37360064562",
+    essential: true,
+  },
 ];
 
 const home: Home = {
