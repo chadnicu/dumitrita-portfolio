@@ -8,6 +8,16 @@
     mask-size: 100% 100%;
 }
 
+.logo {
+    height: 28px;
+    width: auto;
+    display: block;
+}
+
+:global([data-theme="light"]) .logo {
+    filter: invert(1);
+}
+
 @media (max-width: breakpoints.$s) {
     .position {
         top: auto;
