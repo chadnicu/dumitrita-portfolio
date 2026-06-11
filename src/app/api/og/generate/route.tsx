@@ -1,11 +1,16 @@
 import { ImageResponse } from "next/og";
-import { baseURL, person } from "@/resources";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+import { person } from "@/resources";
 
 export const runtime = "nodejs";
 
 export async function GET(request: Request) {
   let url = new URL(request.url);
   let title = url.searchParams.get("title") || "Portfolio";
+
+  const logo = await readFile(path.join(process.cwd(), "public", "images", "logo.png"));
+  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
 
   async function loadGoogleFont(font: string) {
     const url = `https://fonts.googleapis.com/css2?family=${font}`;
@@ -63,12 +68,13 @@ export async function GET(request: Request) {
           }}
         >
           <img
-            src={baseURL + person.avatar}
+            src={logoSrc}
+            width={193}
+            height={224}
             style={{
               width: "12rem",
               height: "12rem",
-              objectFit: "cover",
-              borderRadius: "100%",
+              objectFit: "contain",
             }}
           />
           <div
