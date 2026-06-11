@@ -1,5 +1,15 @@
 @use "./breakpoints.scss" as breakpoints;
 
+.logo {
+    height: 20px;
+    width: auto;
+    display: block;
+}
+
+:global([data-theme="light"]) .logo {
+    filter: invert(1);
+}
+
 @media (max-width: breakpoints.$s) {
     .mobile {
         text-align: center;

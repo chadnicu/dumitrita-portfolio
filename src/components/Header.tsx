@@ -73,9 +73,11 @@ export const Header = () => {
         }}
       >
         <Row paddingLeft="12" fillWidth vertical="center" gap="12" textVariant="body-default-s">
-          <a href="/" aria-label="Home">
-            <img src="/images/logo.png" alt={`${person.name} logo`} className={styles.logo} />
-          </a>
+          <Row s={{ hide: true }}>
+            <a href="/" aria-label="Home">
+              <img src="/images/logo.png" alt={`${person.name} logo`} className={styles.logo} />
+            </a>
+          </Row>
           {display.location && <Row s={{ hide: true }}>{person.location}</Row>}
         </Row>
         <Row fillWidth horizontal="center">

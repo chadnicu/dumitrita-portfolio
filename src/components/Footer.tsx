@@ -21,10 +21,14 @@ export const Footer = () => {
           align: "center",
         }}
       >
-        <Text variant="body-default-s" onBackground="neutral-strong">
-          <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{person.name}</Text>
-        </Text>
+        <Row gap="8" vertical="center">
+          <Text variant="body-default-s" onBackground="neutral-strong">
+            <Text onBackground="neutral-weak">© {currentYear} /</Text>
+            <Text paddingX="4">{person.name}</Text>
+            <Text onBackground="neutral-weak">/</Text>
+          </Text>
+          <img src="/images/logo.png" alt={`${person.name} logo`} className={styles.logo} />
+        </Row>
         <Row gap="16">
           {social.map(
             (item) =>
